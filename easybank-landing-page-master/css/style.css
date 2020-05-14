@@ -1,0 +1,163 @@
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap');
+@import "variabls.css";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Public Sans', sans-serif;
+    font-size: 1.125rem;
+    background-color: var(--very-light-gray);
+}
+
+h1,
+h2,
+h3 {
+    color: var(--dark-blue);
+}
+p {
+    color: var(--grayish-blue);
+}
+
+/* Navbar style */
+header {
+    background-color: var(--white);
+    box-shadow: 0 3px 6px var(--light-grayish-blue);
+}
+
+header nav#main-nav {
+    width: 78%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+header nav#main-nav a {
+    padding: 0.3rem;
+}
+#main-nav ul.navbar {
+    list-style: none;
+    display: flex;
+
+}
+
+#main-nav .navbar li {
+    padding: 0 0.5rem;
+}
+
+#main-nav .navbar a.nav-link:hover {
+    border-bottom: 1px solid;
+}
+#main-nav .navbar .nav-link {
+    text-decoration: none;
+    color: var(--grayish-blue);
+}
+
+.btn {
+    padding: 0.75rem 1.75rem ;
+    border: none;
+    border-radius: 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.header-btn {
+    background-image: linear-gradient(to right, var(--lime-green) , var(--bright-cyan));
+    opacity: 0.8;
+    color: var(--white);
+}
+
+
+/******   ShowCase style   ******/
+
+.showCase {
+    height: 100vh;
+    display: flex;
+}
+
+.rightSection {
+    width: 55%;
+    background-image: url("../images/bg-intro-desktop.svg");
+    background-size: auto;
+    background-position: -2rem -17rem;
+    background-repeat: no-repeat;
+}
+
+.rightSection .imgWrapper {
+    overflow: hidden;
+}
+
+.rightSection img {
+    position: relative;
+    top: -6.75rem;
+    right: -8rem;
+    width:available;
+    width: -moz-available;
+}
+
+.leftSection {
+    width: 45%;
+    padding-left: 11%;
+}
+
+.leftSection h1.leftSection-mainText {
+    font-size: 2.875rem;
+    font-weight: 400;
+    margin-top: 11rem;
+    margin-bottom: 1.8125rem;
+}
+
+.leftSection p.leftSection-subText {
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+}
+
+
+/***** Why choose Easybank? section style ******/
+.Why_Choose_EasyBank .innerSection ,
+.lastArticles {
+    width: 78%;
+    margin: 0 auto;
+}
+
+.Why_Choose_EasyBank {
+    background-color: var(--light-grayish-blue);
+}
+
+.innerSection {
+    padding: 6.875rem 0;
+}
+
+.innerSection h2 {
+    margin-bottom: 2.5rem;
+}
+
+.innerSection p {
+    line-height: 1.8;
+}
+
+.innerSection p.description {
+    width:65%;
+    margin-bottom: 5rem;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 24% 23% 24% 24%;
+    grid-gap: 2.5rem;
+}
+
+.box h3 {
+    margin-top: 2.8125rem;
+    margin-bottom: 2.437rem;
+}
+
+.box p {
+    font-size: 0.975rem;
+}

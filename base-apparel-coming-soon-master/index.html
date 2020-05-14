@@ -25,9 +25,9 @@
 <body>
 <main id="pageContent">
 
-    <section class="leftSection bg-image"></section>
+    <div class="leftSection bg-image"></div>
 
-    <section class="rightSection">
+    <div class="rightSection">
         <article>
             <span class="img-wrapper"><img alt="logo" class="logo" src="./images/logo.svg"/></span>
             <img alt="hero mobile" class="mobileShowCase" src="./images/hero-mobile.jpg"/>
@@ -43,11 +43,11 @@
 
             <form id="form">
                 <label>
-                    <input class="form-control" placeholder="Email Address" id="email" type="email"/>
+                    <input class="form-control" placeholder="Email Address" id="email" name="email" type="email"/>
                 </label>
                 <img alt="errorIcon" class="errorIcon" src="images/icon-error.svg">
                 <small class="errorMsg">Please provide a valid email</small>
-                <button class="btn">
+                <button class="btn" type="submit">
                     <img alt="arrow" src="./images/icon-arrow.svg">
                 </button>
 
@@ -62,7 +62,7 @@
                 </p>
             </footer>
         </article>
-    </section>
+    </div>
 </main>
 
 
