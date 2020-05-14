@@ -19,6 +19,7 @@ h2,
 h3 {
     color: var(--dark-blue);
 }
+
 p {
     color: var(--grayish-blue);
 }
@@ -36,11 +37,27 @@ header nav#main-nav {
     justify-content: space-between;
     align-items: center;
     padding: 1rem 0;
+    position: relative;
+
 }
+
+
+header .btn-toggle {
+    position: absolute;
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+    padding: 0.5rem;
+    right: 0;
+    display: none;
+}
+
+
 
 header nav#main-nav a {
     padding: 0.3rem;
 }
+
 #main-nav ul.navbar {
     list-style: none;
     display: flex;
@@ -51,16 +68,66 @@ header nav#main-nav a {
     padding: 0 0.5rem;
 }
 
-#main-nav .navbar a.nav-link:hover {
-    border-bottom: 1px solid;
-}
+
 #main-nav .navbar .nav-link {
     text-decoration: none;
     color: var(--grayish-blue);
+    position: relative;
+}
+
+#main-nav .navbar .nav-link:after {
+    content: '';
+    position: absolute;
+    height: 4px;
+    width: 0;
+    bottom: -1.37rem;
+    left: 0;
+    background-image: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+    transition: width 350ms ease-in;
+}
+
+#main-nav .navbar a.nav-link:hover:after{
+    width: 100%;
+}
+
+#main-nav ul.navbar.open {
+    display: block;
+    flex-direction: column;
+    position: absolute;
+    right: 0;
+    width: 100%;
+    top: 6rem;
+    transition: all 300ms ease;
+    box-shadow: 0 6px 30px 20px var(--dark-blue);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0;
+    z-index: 10;
+    background-color: var(--white);
+}
+
+#main-nav .navbar.open li {
+    text-align: center;
+    padding: 0;
+}
+
+#main-nav .navbar.open .nav-link {
+    background-color: var(--white);
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    color: var(--dark-blue);
+    transition: all 250ms ease-in;
+}
+
+
+#main-nav .navbar.open .nav-link:hover {
+    background-color: var(--light-grayish-blue);
+    border: 0;
+    color: var(--lime-green);
 }
 
 .btn {
-    padding: 0.75rem 1.75rem ;
+    padding: 0.75rem 1.75rem;
     border: none;
     border-radius: 2rem;
     cursor: pointer;
@@ -68,11 +135,33 @@ header nav#main-nav a {
 }
 
 .header-btn {
-    background-image: linear-gradient(to right, var(--lime-green) , var(--bright-cyan));
+    background-image: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
     opacity: 0.8;
     color: var(--white);
 }
 
+
+
+@keyframes pulse {
+    0%{
+      box-shadow:  0 0 12px var(--lime-green)
+    }
+
+    50% {
+        box-shadow:  0 0 6px rgba(49, 211, 92, 0.6)
+    }
+
+    100%{
+        box-shadow:  0 0 12px var(--lime-green)
+    }
+}
+
+.header-btn:hover {
+    opacity: 0.6;
+    animation-name: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+}
 
 /******   ShowCase style   ******/
 
@@ -97,7 +186,7 @@ header nav#main-nav a {
     position: relative;
     top: -6.75rem;
     right: -8rem;
-    width:available;
+    width: available;
     width: -moz-available;
 }
 
@@ -118,11 +207,15 @@ header nav#main-nav a {
     margin-bottom: 2.5rem;
 }
 
+.leftSection .header-btn{
+    opacity: 0.9;
+}
+
 
 /***** Why choose Easybank? section style ******/
-.Why_Choose_EasyBank .innerSection ,
-.lastArticles {
-    width: 78%;
+.Why_Choose_EasyBank .innerSection,
+.latestArticles {
+    width: 85%;
     margin: 0 auto;
 }
 
@@ -131,7 +224,7 @@ header nav#main-nav a {
 }
 
 .innerSection {
-    padding: 6.875rem 0;
+    padding: 6.875rem 2.5rem;
 }
 
 .innerSection h2 {
@@ -143,14 +236,14 @@ header nav#main-nav a {
 }
 
 .innerSection p.description {
-    width:65%;
+    width: 65%;
     margin-bottom: 5rem;
 }
 
 .gridContainer {
     display: grid;
-    grid-template-columns: 24% 23% 24% 24%;
-    grid-gap: 2.5rem;
+    grid-gap: 40px 13px;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
 .box h3 {
@@ -160,4 +253,255 @@ header nav#main-nav a {
 
 .box p {
     font-size: 0.975rem;
+}
+
+
+/*Latest Articles section style*/
+
+.gridContainer.articlesContainer {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1.5em 1em;
+}
+
+.latestArticles {
+    padding: 0 2.5rem 5rem;
+
+}
+
+.latestArticles h2 {
+    margin: 6.25rem 0 3.6875rem;
+}
+
+.articleBox {
+    background-color: var(--white);
+    box-shadow: 0 3px 15px var(--light-grayish-blue);
+    border-radius: 0.6rem;
+}
+
+.articleBox img {
+    width: 100%;
+    height: 200px;
+    border-top-right-radius: 0.6rem;
+    border-top-left-radius: 0.6rem;
+}
+
+.articleBox .innerDetails {
+    padding: 1.75rem 1.125rem;
+}
+
+
+.innerDetails .articleAuthor {
+    color: var(--grayish-blue);
+    font-size: 0.679rem;
+}
+
+.innerDetails .articleTitle {
+    color: var(--dark-blue);
+    cursor: pointer;
+    display: block;
+    font-style: normal;
+    margin: 1rem 0;
+}
+
+
+.innerDetails p {
+    font-size: 0.765rem;
+    line-height: 1.5;
+}
+
+.articleTitle:hover,
+.footer-nav ul .nav-link:hover
+{
+    color: #28c286;
+}
+
+/*Footer Section Style*/
+
+footer.main-footer {
+    background-color: var(--dark-blue);
+    color: var(--white);
+    position: relative;
+}
+
+.innerFooter .social-wrapper,
+.innerFooter .innerFooter-left,
+.innerFooter .innerFooter-right,
+.main-footer .innerFooter,
+.footer-nav ul{
+    display: flex;
+    justify-content: space-between;
+}
+
+.main-footer .innerFooter {
+    width: 79%;
+    margin: 0 auto;
+    padding: 3.125rem 0;
+}
+
+.innerFooter .innerFooter-left {
+    width: 55%;
+}
+
+.innerFooter .social-wrapper {
+    display: flex;
+    margin-top: 3.4375rem;
+}
+
+.social-wrapper img{
+    cursor: pointer;
+}
+
+
+.innerFooter .innerFooter-right {
+    flex-direction: column;
+}
+
+.innerFooter-right .copyright {
+    color: var(--grayish-blue);
+}
+
+.footer-nav {
+    height: 100%;
+}
+
+.footer-nav ul {
+    list-style: none;
+    height: 100%;
+    flex-direction: column;
+
+}
+
+.footer-nav ul .nav-link {
+    text-decoration: none;
+    color: var(--white);
+}
+
+.innerFooter-right .header-btn {
+    width: 80%;
+    margin-left: auto;
+    opacity: 1;
+}
+
+.attribution {
+    position: absolute;
+    bottom: 0.5rem;
+    color: var(--grayish-blue);
+}
+
+
+
+/****** Media query ******/
+
+
+@media (max-width: 992px) {
+    .showCase {
+        height: unset;
+        margin-bottom: 3rem;
+    }
+
+    #main-nav .header-btn {
+        display: none;
+    }
+
+    #main-nav .navbar .nav-link:after{
+        bottom: -1rem;
+    }
+
+}
+
+@media (min-width: 768px) {
+    #main-nav ul.navbar{
+        display: flex;
+    }
+
+    #main-nav .btn-toggle,
+    #main-nav ul.navbar.open{
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .showCase{
+        flex-direction: column-reverse;
+    }
+
+    .rightSection,
+    .leftSection{
+        width: 100%;
+        padding: 0;
+    }
+
+    .rightSection{
+        background-image: url('../images/bg-intro-mobile.svg');
+        background-position: center;
+        -webkit-background-size: cover;
+        background-size: cover;
+        padding: 0 0.5rem;
+    }
+
+    .rightSection img{
+        top: -4rem;
+        right: 0;
+        width: 100%;
+    }
+
+    #main-nav ul.navbar{
+        display: none;
+    }
+
+    #main-nav .navbar .nav-link:after{
+        display: none;
+    }
+    #main-nav .btn-toggle{
+        display: block;
+    }
+
+    .leftSection{
+        text-align: center;
+    }
+    .leftSection h1.leftSection-mainText {
+        margin-top: 0;
+    }
+
+    .leftSection p.leftSection-subText {
+        padding: 0 1rem;
+    }
+
+    .Why_Choose_EasyBank .innerSection {
+        text-align: center;
+    }
+
+    .innerSection p.description{
+        width: 100%;
+    }
+
+    .main-footer .innerFooter,
+    .innerFooter .innerFooter-left{
+        flex-direction: column;
+        text-align: center;
+
+    }
+
+    .innerFooter .innerFooter-left{
+        margin: 0 auto;
+    }
+
+    .innerFooter .social-wrapper{
+        margin-top: 1.875rem;
+        margin-bottom: 2.1875rem;
+    }
+
+    .footer-nav ul .nav-link{
+        margin-bottom: 1.25rem;
+        display: inline-block;
+    }
+
+    .innerFooter-right .header-btn{
+        width: 60%;
+        margin: 0 auto 1.875rem;
+    }
+    .attribution {
+        left: 15%;
+        right: 15%;
+    }
 }

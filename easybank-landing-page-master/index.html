@@ -25,12 +25,15 @@
 </head>
 <body>
 <header>
-    <nav id="main-nav">
+    <nav id="main-nav" role=navigation>
         <a class="nav-brand" href="#">
             <img alt="logo" src="./images/logo.svg"/>
         </a>
 
-        <ul class="navbar">
+        <button class="btn-toggle" id="toggle">
+            <img alt="menu icon" id="icon-hamburger" src="./images/icon-hamburger.svg">
+        </button>
+        <ul class="navbar" id="navbar">
             <li><a class="nav-link" href="#">Home</a></li>
             <li><a class="nav-link" href="#">About</a></li>
             <li><a class="nav-link" href="#">Contact</a></li>
@@ -50,7 +53,8 @@
             <h1 class="leftSection-mainText">
                 Next generation <br/> digital banking
             </h1>
-            <p class="leftSection-subText">Take your financial life online. Your Easybank account will be a one-stop-shop
+            <p class="leftSection-subText">Take your financial life online. Your Easybank account will be a
+                one-stop-shop
                 for spending, saving, budgeting, investing, and much more.
             </p>
 
@@ -117,89 +121,122 @@
 
     </section>
 
-    <section class="lastArticles">
-        <div class="gridContainer">
+    <!--  Articles Section   -->
+    <section class="latestArticles">
+        <h2>Latest Articles</h2>
+        <div class="gridContainer articlesContainer">
             <article class="articleBox">
-                <img alt="" src="">
-                <small>By Claire Robinson</small>
-                <cite class="articleTitle">Receive money in any currency with no fees</cite>
-                <p>The world is getting smaller and we’re becoming more mobile. So why should you be
-                    forced to only receive money in a single …</p>
+                <img alt="Receive money" src="./images/image-currency.jpg">
+                <div class="innerDetails">
+                    <small class="articleAuthor">By Claire Robinson</small>
+                    <cite class="articleTitle">Receive money in any currency with no fees</cite>
+                    <p>The world is getting smaller and we’re becoming more mobile. So why should you be
+                        forced to only receive money in a single …
+                    </p>
+                </div>
             </article>
 
             <article class="articleBox">
-                <img alt="" src="">
-                <small>By Wilson Hutton</small>
-                <cite class="articleTitle">Treat yourself without worrying about money</cite>
-                <p>
-                    Our simple budgeting feature allows you to separate out your spending and set
-                    realistic limits each month. That means you …
-                </p>
+                <img alt="Restaurant" src="./images/image-restaurant.jpg">
+                <div class="innerDetails">
+                    <small class="articleAuthor">By Wilson Hutton</small>
+                    <cite class="articleTitle">Treat yourself without worrying about money</cite>
+                    <p>
+                        Our simple budgeting feature allows you to separate out your spending and set
+                        realistic limits each month. That means you …
+                    </p>
+                </div>
             </article>
 
             <article class="articleBox">
-                <img alt="" src="">
-                <small class="articleAuthor">
-                    By Wilson Hutton
-                </small>
-                <cite class="articleTitle">
-                    Take your Easybank card wherever you go
-                </cite>
-                <p class="articleDetails">
-                    We want you to enjoy your travels. This is why we don’t charge any fees on purchases
-                    while you’re abroad. We’ll even show you …
-                </p>
+                <img alt="Plan" src="./images/image-plane.jpg">
+                <div class="innerDetails">
+                    <small class="articleAuthor">
+                        By Wilson Hutton
+                    </small>
+                    <cite class="articleTitle">
+                        Take your Easybank card wherever you go
+                    </cite>
+                    <p class="articleDetails">
+                        We want you to enjoy your travels. This is why we don’t charge any fees on purchases
+                        while you’re abroad. We’ll even show you …
+                    </p>
+                </div>
             </article>
 
             <article class="articleBox">
-                <img alt="" src="">
-                <small class="articleAuthor">
-                    By Claire Robinson
-                </small>
-                <cite class="articleTitle">
-                    Our invite-only Beta accounts are now live!
-                </cite>
-                <p class="articleDetails">
-                    After a lot of hard work by the whole team, we’re excited to launch our closed beta.
-                    It’s easy to request an invite through the site ...
-                </p>
+                <img alt="confetti" src="./images/image-confetti.jpg">
+                <div class="innerDetails">
+                    <small class="articleAuthor">
+                        By Claire Robinson
+                    </small>
+                    <cite class="articleTitle">
+                        Our invite-only Beta accounts are now live!
+                    </cite>
+                    <p class="articleDetails">
+                        After a lot of hard work by the whole team, we’re excited to launch our closed beta.
+                        It’s easy to request an invite through the site ...
+                    </p>
+                </div>
             </article>
         </div>
     </section>
 </main>
 
 
-<!--<footer>-->
+<footer class="main-footer">
 
-<!--    About Us-->
-<!--    Contact-->
-<!--    Blog-->
-<!--    Careers-->
-<!--    Support-->
-<!--    Privacy Policy-->
+    <section class="innerFooter">
 
-<!--    Request Invite-->
+        <div class="innerFooter-left">
+            <div class="firstCol">
+                <img alt="logo" src="./images/logoFooter.svg">
+                <span class="social-wrapper">
+                    <img alt="Facebook" src="./images/icon-facebook.svg">
+                    <img alt="Youtube" src="./images/icon-youtube.svg">
+                    <img alt="Twitter" src="./images/icon-twitter.svg">
+                    <img alt="Pintrst" src="./images/icon-pinterest.svg">
+                    <img alt="Instagram" src="./images/icon-instagram.svg">
+                </span>
+            </div>
+            <div class="secondCol">
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a class="nav-link" href="#">About Us</a></li>
+                        <li><a class="nav-link" href="#">Contact</a></li>
+                        <li><a class="nav-link" href="#">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
 
-<!--    © Easybank. All Rights Reserved-->
-<!--</footer>-->
+            <div class="thirdCol">
+                <nav class="footer-nav">
+                    <ul>
+                        <li><a class="nav-link" href="#">Careers</a></li>
+                        <li><a class="nav-link" href="#">Support</a></li>
+                        <li><a class="nav-link" href="#">Privacy Policy</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+        </div>
+        <div class="innerFooter-right">
+            <button class="btn header-btn">
+                Request Invite
+            </button>
+            <small class="copyright">
+                © Easybank. All Rights Reserved
+            </small>
+            <div class="attribution">
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+                Coded by <a href="http://github.com/ayahabeeb98">Aya Habeeb</a>.
+            </div>
+        </div>
+    </section>
+
+</footer>
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-    Coded by <a href="#">Your Name Here</a>.
-</div>
+<script src="./js/main.js"></script>
 </body>
 </html>
