@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+@import "variables.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    background-color: var(--light-gray);
+}
+
+h1 {
+    font-weight: 700;
+}
+
+
+.pageContent {
+    width: 55%;
+    background-color: #FFF;
+    box-shadow: 3px 6px 10px var(--grayish-blue);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 0.5rem;
+    flex-grow: 1;
+}
+
+.topSection,
+article {
+    padding-top: 2.75rem;
+    padding-left: 2.65rem;
+    padding-bottom: 2.92rem;
+}
+
+.topSection__title {
+    color: var(--cyan);
+    margin-bottom: 1.875rem;
+}
+
+.topSection__subtitle {
+    color: var(--bright-yellow);
+    margin-bottom: 1.25rem;
+}
+
+.topSection__description {
+    color: var(--grayish-blue);
+    line-height: 1.8;
+    width: 80%;
+}
+
+.bottomSection {
+    display: flex;
+    background-color: var(--cyan);
+    border-bottom-left-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    overflow: hidden;
+
+}
+
+.bottomSection article {
+    width: 50%;
+    color: var(--light-gray);
+}
+
+.bottomSection article:last-child {
+    background-color: #4abebd;
+}
+
+
+.bottomSection__subtitle {
+    vertical-align: center;
+    margin: 1.25rem 0 0.3rem;
+}
+.bottomSection__subtitle strong {
+    color: #FFFFFF;
+    font-size: 2rem;
+}
+
+.bottomSection__subtitle span {
+    color: var(--light-gray);
+    vertical-align: super;
+}
+
+.btn {
+    min-width: 237px;
+    cursor: pointer;
+    padding: 0.875rem;
+    border: none;
+    border-radius: 0.3rem;
+    background-color: var(--bright-yellow);
+    color: #FFFFFF;
+    margin-top: 1.875rem;
+    font-size: 1rem;
+    box-shadow: 2px 3px 10px var(--grayish-blue);
+}
+
+
+.bottomSection__title--sec {
+    margin-bottom: 1.25rem;
+}
+
+.bottomSection__description--short {
+    width: 70%;
+    line-height: 1.5;
+}
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    position: absolute;
+    bottom: 1rem;
+    left: 15%;
+    right: 15%;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+
+@media (max-width: 992px) {
+    .pageContent{
+        width: 70%;
+    }
+}
+@media (max-width: 876px) {
+    .pageContent {
+        position: unset;
+        transform: unset;
+        margin: 1rem auto;
+        width: 80%;
+    }
+    .bottomSection {
+        flex-direction: column;
+    }
+
+    .bottomSection article {
+        width: 100%;
+    }
+    
+    .attribution {
+        position: unset;
+        margin-bottom: 1rem;
+    }
+
+    .topSection,
+    article {
+        padding-top: 1.5rem;
+    }
+}
+
+
+@media (max-width: 573px) {
+    .topSection,
+    article {
+        padding-right: 1rem;
+    }
+
+    .pageContent p {
+        width: 100%;
+        font-size: 0.875rem;
+    }
+}

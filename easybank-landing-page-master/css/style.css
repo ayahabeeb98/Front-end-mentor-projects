@@ -101,7 +101,7 @@ header nav#main-nav a {
     box-shadow: 0 6px 30px 20px var(--dark-blue);
     border-radius: 0.5rem;
     padding: 0.5rem 0;
-    z-index: 10;
+    z-index: 100;
     background-color: var(--white);
 }
 
@@ -144,7 +144,7 @@ header nav#main-nav a {
 
 @keyframes pulse {
     0%{
-      box-shadow:  0 0 12px var(--lime-green)
+        box-shadow:  0 0 12px var(--lime-green)
     }
 
     50% {
@@ -166,7 +166,6 @@ header nav#main-nav a {
 /******   ShowCase style   ******/
 
 .showCase {
-    height: 100vh;
     display: flex;
 }
 
@@ -188,6 +187,7 @@ header nav#main-nav a {
     right: -8rem;
     width: available;
     width: -moz-available;
+    z-index: 20;
 }
 
 .leftSection {
@@ -221,6 +221,8 @@ header nav#main-nav a {
 
 .Why_Choose_EasyBank {
     background-color: var(--light-grayish-blue);
+    position: relative;
+    margin-top: -16rem;
 }
 
 .innerSection {
@@ -301,6 +303,8 @@ header nav#main-nav a {
     display: block;
     font-style: normal;
     margin: 1rem 0;
+    font-size: 1.125rem;
+    font-weight: 400;
 }
 
 
@@ -431,6 +435,9 @@ footer.main-footer {
         padding: 0;
     }
 
+    .Why_Choose_EasyBank {
+        margin-top: 0;
+    }
     .rightSection{
         background-image: url('../images/bg-intro-mobile.svg');
         background-position: center;
@@ -469,6 +476,7 @@ footer.main-footer {
 
     .Why_Choose_EasyBank .innerSection {
         text-align: center;
+
     }
 
     .innerSection p.description{

@@ -7,13 +7,7 @@ let toggle = true;
 
 toggleBtn.addEventListener('click', function(){
     menu.classList.toggle('open');
-
-    if (toggle === true) {
-        image.src  = closeIcon;
-    } else {
-        image.src= openIcon;
-    }
-
+    toggle === true ? image.src  = closeIcon: image.src= openIcon
     toggle = !toggle;
 });
 
