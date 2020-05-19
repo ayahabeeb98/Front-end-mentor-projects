@@ -1,0 +1,22 @@
+{
+  "name": "ping-coming-soon-page-master",
+  "version": "1.0.0",
+  "description": "A simple component to start practice SASS in styling",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ayahabeeb98/Front-end-mentor-projects.git"
+  },
+  "author": "Aya Habeeb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ayahabeeb98/Front-end-mentor-projects/issues"
+  },
+  "homepage": "https://github.com/ayahabeeb98/Front-end-mentor-projects#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

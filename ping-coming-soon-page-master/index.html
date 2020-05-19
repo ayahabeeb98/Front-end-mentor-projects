@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <!-- displays site properly based on user's device -->
+
+    <link href="./images/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
+    <link href="css/style.css" rel="stylesheet">
+    <link crossorigin="anonymous" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+          integrity="sha256-h20CPZ0QyXlBuAw7A+KluUYx/3pK+c7lYEpqLTlxjYQ=" rel="stylesheet"/>
+    <title>Frontend Mentor | Ping coming soon page</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+<body>
+<main class="container">
+    <header class="header">
+        <img alt="header__logo" class="mainHeader--logo" src="./images/logo.svg">
+        <h1 class="header__mainHeading">We are launching <span>soon!</span></h1>
+        <p class="header__subHeading">Subscribe and get notified</p>
+        <form class="form" id="form">
+            <label for="email">
+                <input class="form__control" id="email" name="email" placeholder="Your Email address.." type="text">
+            </label>
+            <span class="form--error__error" id="error">please provide a valid email address</span>
+            <button class="form__btn" type="submit">Notify Me</button>
+        </form>
+    </header>
+
+
+    <img alt="dashboard" class="showCase" src="./images/illustration-dashboard.png">
+
+    <footer>
+        <div class="social">
+            <a class="social__link" href="https://www.facebook.com"><i class="fab fa-facebook-f"></i></a>
+            <a class="social__link" href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+            <a class="social__link" href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+        </div>
+        <small class="copyright">&copy; Copyright Ping. All rights reserved.</small>
+    </footer>
+</main>
+
+
+<footer>
+    <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://github.com/ayahabeeb98/">Aya Habeeb</a>.
+    </p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
