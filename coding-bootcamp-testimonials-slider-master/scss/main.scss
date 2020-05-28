@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap');
+@import "variables";
+@import "responsive";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 2rem;
+  font-family: 'Inter', sans-serif;
+  color: $color-blue-primary;
+  background: url('../images/pattern-bg.svg') top right no-repeat,
+  url("../images/pattern-curve.svg") left bottom no-repeat;
+}
+
+.sr-only {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+
+
+.slider {
+  position: relative;
+  width: 76.875%;
+  display: flex;
+  margin: 3.875rem auto 10rem;
+
+  &__content {
+    margin-top: 8rem;
+    background: url("../images/pattern-quotes.svg") 15% top no-repeat;
+    padding-top: 4.37rem;
+    position: relative;
+    z-index: 10;
+
+    p {
+      font-weight: 300;
+      margin-bottom: 3.125rem;
+      width: 130%;
+    }
+
+  }
+
+  &__author {
+    display: flex;
+    font-size: 1.5rem;
+
+    h4 {
+
+      margin-right: 0.6rem;
+    }
+
+    span {
+      font-weight: 300;
+      color: $color-grayish-blue;
+    }
+  }
+
+
+  &__img {
+    position: relative;
+    top: 0;
+    right: -4rem;
+
+  }
+
+
+}
+
+.slide__two {
+  display: none;
+}
+
+.controls {
+  position: absolute;
+  bottom: -1rem;
+  left: 15%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 3rem;
+  box-shadow: 0 4px 10px 5px lighten($color-blue-primary, 70%);
+
+  .btn {
+    background-color: #FFF;
+    border: none;
+    padding: 1rem 1.25rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #dcdcef;
+    }
+
+    &:focus {
+      outline: transparent;
+    }
+
+    &:first-of-type {
+      border-top-left-radius: 3rem;
+      border-bottom-left-radius: 3rem;
+    }
+
+    &:last-of-type {
+      border-top-right-radius: 3rem;
+      border-bottom-right-radius: 3rem;
+    }
+  }
+
+}
+
+
+@include respond(large_screen) {
+
+  body {
+    background: url("../images/pattern-bg.svg") right 8% no-repeat, url("../images/pattern-curve.svg") left bottom no-repeat;
+    background-size: contain;
+  }
+
+
+  .slider {
+    margin-bottom: 3rem;
+    text-align: center;
+    flex-direction: column-reverse;
+    width: 80%;
+    &__content {
+
+      margin-top: 3rem;
+
+      p {
+        width: 100%;
+      }
+    }
+
+    &__author {
+      font-size: 1.25rem;
+      flex-direction: column;
+      margin-bottom: 7rem;
+      position: unset;
+
+    }
+
+    &__img {
+      position: relative;
+      right: 0;
+      top: 1rem;
+      text-align: center;
+      margin-bottom: 3.125rem;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+
+  .controls {
+    left: 30%;
+  }
+
+}
+
+
+@include respond(phone) {
+  .slider {
+    &__content {
+      font-size: 1rem;
+
+      p{
+        font-weight: 500;
+        width: 90%;
+        margin: 0 auto 2rem;
+      }
+    }
+  }
+
+  .controls {
+    .btn {
+      padding: 0.875rem 1rem;
+    }
+  }
+}

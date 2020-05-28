@@ -1,0 +1,14 @@
+{
+  "name": "coding-bootcamp-testimonials-slider-master",
+  "version": "1.0.0",
+  "description": "Responsive slider",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass" : "node-sass scss/main.scss css/style.css -w"
+  },
+  "author": "Aya Habeeb",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  }
+}

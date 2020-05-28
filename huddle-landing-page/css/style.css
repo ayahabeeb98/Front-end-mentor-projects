@@ -66,7 +66,7 @@ ul.menu .menu__btn:hover {
     display: grid;
     grid-row-gap: 5px;
     grid-template-columns: repeat(2, 50%);
-    padding-bottom: 3rem;
+    padding-bottom: 5rem;
 }
 
 .hero .hero__text {
@@ -124,6 +124,9 @@ section.services {
     background-color: #FFF;
     box-shadow: 0 2px 7px 3px rgba(0, 0, 0, .04);
     border-radius: 1rem;
+}
+
+.services .services__serv:not(:last-child) {
     margin-bottom: 3rem;
 }
 
@@ -158,7 +161,7 @@ section.services {
 footer {
     background-color: #00252E;
     position: relative;
-    margin-top: 15rem;
+    margin-top: 21.5rem;
 }
 
 footer .box {
