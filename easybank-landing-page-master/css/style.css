@@ -474,6 +474,12 @@ footer.main-footer {
         padding: 0 1rem;
     }
 
+    .latestArticles,
+    .Why_Choose_EasyBank .innerSection{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
     .Why_Choose_EasyBank .innerSection {
         text-align: center;
 

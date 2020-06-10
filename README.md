@@ -49,5 +49,21 @@ My submissions for the Frontend Mentor Challenges.
         </a>
       </td>
     </tr>
+    <tr>
+        <td>6</td>
+          <td>
+            <a href="https://ayahabeeb98.github.io/Front-end-mentor-projects/huddle-landing-page" target="_blank"> 
+               Huddle landing page with alternating feature blocks
+            </a>
+        </td>
+    </tr>
+    <tr>
+       <td>7</td>
+          <td>
+             <a href="https://ayahabeeb98.github.io/Front-end-mentor-projects/bookmark-landing-page-master" target="_blank"> 
+                   Bookmark landing page
+              </a>
+           </td>
+    </tr>      
  </tbody>
 </table>
