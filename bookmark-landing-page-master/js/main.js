@@ -20,7 +20,10 @@ toggleBtn.addEventListener('click', () => {
 links.forEach(link => {
     link.addEventListener('click', () => {
         menu.classList.remove('open');
+        toggle === true ? image.src = closeIcon : image.src = openIcon;
+        toggle = !toggle;
     });
+
 
 });
 

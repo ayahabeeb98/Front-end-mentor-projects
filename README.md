@@ -52,8 +52,8 @@ My submissions for the Frontend Mentor Challenges.
     <tr>
         <td>6</td>
           <td>
-            <a href="https://ayahabeeb98.github.io/Front-end-mentor-projects/huddle-landing-page" target="_blank"> 
-               Huddle landing page with alternating feature blocks
+            <a href="https://ayahabeeb98.github.io/Front-end-mentor-projects/coding-bootcamp-testimonials-slider-master" target="_blank"> 
+               Coding bootcamp testimonials slider
             </a>
         </td>
     </tr>
@@ -64,6 +64,6 @@ My submissions for the Frontend Mentor Challenges.
                    Bookmark landing page
               </a>
            </td>
-    </tr>      
+    </tr>     
  </tbody>
 </table>

@@ -245,8 +245,9 @@
     <h4 class="footer__heading">Stay up-to-date with what <br/> we’re doing</h4>
 
     <form class="formContainer" onsubmit="return validation()" id="contact">
-        <label class="form__group">
-            <input class="form-control" id="email" placeholder="Enter your email" type="email">
+        <label class="form__group" for="email">
+            <span class="sr-only">Email Address</span>
+            <input class="form-control" name="email" id="email" placeholder="Enter your email" type="email">
             <span class="error-icon"><img alt="error icon" src="./images/icon-error.svg"></span>
         </label>
         <span class="errorMsg">whoops, make sure it's an email</span>
@@ -287,8 +288,8 @@
 
 
             <p class="attribution">
-                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-                Coded by <a href="https://github.com/ayahabeeb98">Aya Habeeb</a>.
+                Challenge by <a href="https://www.frontendmentor.io?ref=challenge" rel="noopener" target="_blank">Frontend Mentor</a>.
+                Coded by <a href="https://github.com/ayahabeeb98" target="_blank" rel="noopener">Aya Habeeb</a>.
             </p>
         </div>
     </div>

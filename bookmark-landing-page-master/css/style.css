@@ -15,6 +15,7 @@
     padding: 0;
     box-sizing: border-box;
 }
+
 html {
     scroll-behavior: smooth;
 }
@@ -32,6 +33,7 @@ ul {
     list-style: none;
 }
 
+
 .btn {
     cursor: pointer;
     width: 30%;
@@ -42,6 +44,38 @@ ul {
     font-size: 1rem;
     transition: all 400ms ease-in-out;
 }
+
+@keyframes fadeTransition {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes showError {
+    0% {
+        bottom: 0;
+    }
+
+    100% {
+        bottom: -1.65rem;
+    }
+}
+
+
+@keyframes showErrorMobile {
+    0% {
+        bottom: 4rem;
+    }
+
+    100% {
+        bottom: 2.875rem;
+    }
+}
+
 
 /*Mobile Menu Style*/
 
@@ -74,7 +108,6 @@ ul {
     left: 0;
     background-color: hsla(229, 31%, 21%, 0.91);
 }
-
 
 
 .main-nav {
@@ -113,7 +146,7 @@ ul {
 .bottom-nav .nav-link:hover,
 .social__link:hover .fab,
 .tab__link:hover,
-.top-nav.open .nav-link:hover{
+.top-nav.open .nav-link:hover {
     color: var(--primaryColor-red);
 }
 
@@ -122,6 +155,7 @@ ul {
     text-transform: uppercase;
     color: var(--whiteColor);
     vertical-align: middle;
+    font-weight: 500;
     background-color: var(--primaryColor-red);
     box-shadow: 0 3px 10px rgba(0, 0, 0, .16);
 }
@@ -273,15 +307,6 @@ h2 {
     animation: fadeTransition 600ms ease;
 }
 
-@keyframes fadeTransition {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
 
 .tab-pane {
     display: none;
@@ -577,7 +602,7 @@ footer {
     display: none;
     position: absolute;
     right: .5rem;
-    top:.75rem;
+    top: .75rem;
 }
 
 .errorMsg {
@@ -600,16 +625,7 @@ footer {
 }
 
 .formContainer.error .form-control {
-    border:2px solid  var(--primaryColor-red);
-}
-@keyframes showError {
-    0% {
-        bottom: 0;
-    }
-
-    100%{
-        bottom: -1.65rem;
-    }
+    border: 2px solid var(--primaryColor-red);
 }
 
 @media (max-width: 1099px) {
@@ -725,14 +741,14 @@ footer {
     }
 
     .top-nav.open .nav-item:not(:last-of-type) {
-        border-bottom: 1px solid rgba(255,255,255,.6);
+        border-bottom: 1px solid rgba(255, 255, 255, .6);
     }
 
     .top-nav.open .nav-item:first-of-type {
-        border-top: 1px solid rgba(255,255,255,.6);
+        border-top: 1px solid rgba(255, 255, 255, .6);
     }
 
-    .top-nav.open .btn-login{
+    .top-nav.open .btn-login {
         margin: 1rem 0;
         width: 100%;
         background-color: transparent;
@@ -851,6 +867,10 @@ footer {
         justify-content: space-around;
     }
 
+    .btns .btn {
+        width: 45%;
+    }
+
     .btn {
         font-size: 0.875rem;
     }
@@ -887,7 +907,8 @@ footer {
     .footerContainer {
         width: 86%;
     }
-   .formContainer {
+
+    .formContainer {
         flex-direction: column;
     }
 
@@ -899,6 +920,17 @@ footer {
     .form-control {
         padding: .75rem .5rem;
         margin-bottom: .75rem;
+    }
+
+    .errorMsg {
+        width: 100%;
+        bottom: 2.875rem;
+        animation-name: showErrorMobile;
+    }
+
+
+    .formContainer.error .btn-danger {
+        margin-top: 1rem;
     }
 
 

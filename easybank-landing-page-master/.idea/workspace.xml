@@ -1,13 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f70b4f04-9f39-4176-9ecf-23ea3144c063" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../bookmark-landing-page-master/css/style.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bookmark-landing-page-master/images/logo-footer.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../bookmark-landing-page-master/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
-    </list>
+    <list default="true" id="f70b4f04-9f39-4176-9ecf-23ea3144c063" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -35,8 +29,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="463">
-              <caret line="479" column="24" selection-start-line="479" selection-start-column="24" selection-end-line="479" selection-end-column="24" />
+            <state relative-caret-position="157">
+              <caret line="461" column="26" lean-forward="true" selection-start-line="461" selection-start-column="26" selection-end-line="461" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -153,16 +147,15 @@
       <workItem from="1589286638289" duration="1927000" />
       <workItem from="1589357594882" duration="12518000" />
       <workItem from="1589455450829" duration="25057000" />
-      <workItem from="1591819225133" duration="123000" />
+      <workItem from="1591819225133" duration="722000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39625000" />
+    <option name="totallyTimeSpent" value="40224000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -292,8 +285,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="463">
-          <caret line="479" column="24" selection-start-line="479" selection-start-column="24" selection-end-line="479" selection-end-column="24" />
+        <state relative-caret-position="157">
+          <caret line="461" column="26" lean-forward="true" selection-start-line="461" selection-start-column="26" selection-end-line="461" selection-end-column="26" />
         </state>
       </provider>
     </entry>
