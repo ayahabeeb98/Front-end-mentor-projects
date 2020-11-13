@@ -378,13 +378,12 @@ footer {
     margin-bottom: 1rem;
 }
 
-.link {
+.list_item {
     color: var(--color-grayishViolet);
     font-size: .875rem;
-    cursor: pointer;
 }
 
-.link:not(:last-of-type) {
+.list_item:not(:last-of-type) {
     margin-bottom: 15px;
 }
 
