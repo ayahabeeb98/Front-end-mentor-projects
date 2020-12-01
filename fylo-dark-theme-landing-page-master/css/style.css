@@ -61,6 +61,7 @@ p {
 
 .pageHeader {
     background-color: var(--primary-dark-blue);
+    padding-top: 3em;
 }
 
 .main-nav {
@@ -412,6 +413,7 @@ footer .container {
 
     .gridContainer {
         grid-template-columns: repeat(auto-fill,minmax(300px,1fr));
+        grid-gap: 7em;
     }
 
     .hero img ,
