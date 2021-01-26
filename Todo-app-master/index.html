@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <link rel="stylesheet" href="./css/main.css">
+    <title>Frontend Mentor | Todo app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+        .attribution {
+            font-size: 11px;
+            text-align: center;
+            margin-bottom: 2em;
+        }
+
+        .attribution a {
+            color: hsl(228, 45%, 44%);
+        }
+    </style>
+</head>
+<body>
+<header class="app-header">
+    <section class="header-bar container">
+        <h1 class="main-heading">
+            Todo
+        </h1>
+        <button class="btn btn-toggle">
+            <img src="./images/icon-moon.svg" id="icon" alt="">
+        </button>
+    </section>
+</header>
+
+<main class="container">
+    <div class="todoWrapper">
+        <form class="addTaskForm">
+            <span class="btn-status">&nbsp;</span>
+            <label for="todoItem">
+                <input type="text" id="todoItem" placeholder="Create a new todo...">
+            </label>
+        </form>
+        <ul class="todo-list">
+            <li class="todo-item done">
+                <button class="btn btn-status">&nbsp;</button>
+                <p>task#1</p>
+                <button class="btn btn-remove">
+                    <img src="./images/icon-cross.svg" alt="">
+                </button>
+            </li>
+
+
+            <li class="todo-item">
+                <button class="btn btn-status">&nbsp;</button>
+                <p>task#2</p>
+                <button class="btn btn-remove">
+                    <img src="./images/icon-cross.svg" alt="">
+                </button>
+            </li>
+
+
+            <li class="todo-item">
+                <button class="btn btn-status">&nbsp;</button>
+                <p>task#3</p>
+                <button class="btn btn-remove">
+                    <img src="./images/icon-cross.svg" alt="">
+                </button>
+            </li>
+
+
+            <li class="todo-item">
+                <button class="btn btn-status">&nbsp;</button>
+                <p>task#4</p>
+                <button class="btn btn-remove">
+                    <img src="./images/icon-cross.svg" alt="">
+                </button>
+            </li>
+
+            <li>
+                <ul class="actions-list">
+                    <li class="actions">
+                        <p>4 items left</p>
+                        <div>
+                            <button class="btn btn-action active">All</button>
+                            <button class="btn btn-action">Active</button>
+                            <button class="btn btn-action">Completed</button>
+                        </div>
+                        <button class="btn btn-clear">
+                            Clear Completed
+                        </button>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="mobile-actions">
+            <button class="btn btn-action active">All</button>
+            <button class="btn btn-action">Active</button>
+            <button class="btn btn-action">Completed</button>
+        </div>
+
+        <small class="info">
+            Drag and drop to reorder list
+        </small>
+    </div>
+
+
+</main>
+
+
+<div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="https://github.com/ayahabeeb98">Aya Habeeb</a>.
+</div>
+</body>
+</html>
