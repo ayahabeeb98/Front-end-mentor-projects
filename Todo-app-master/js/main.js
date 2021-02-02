@@ -11,7 +11,7 @@ const root = document.documentElement;
 const toggleBtn = document.querySelector('.btn-toggle');
 const themeIcon = document.querySelector('#icon');
 
-root.classList.add('light-theme');
+root.classList.add('dark-theme');
 
 function toggleTheme() {
     let toggle = root.classList.contains('light-theme');
