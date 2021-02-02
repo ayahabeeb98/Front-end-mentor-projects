@@ -15,7 +15,7 @@ root.classList.add('dark-theme');
 
 function toggleTheme() {
     let toggle = root.classList.contains('dark-theme');
-    themeIcon.src = toggle ? './images/icon-sun.svg' : './images/icon-moon.svg';
+    themeIcon.src = toggle ? './images/icon-moon.svg' : './images/icon-sun.svg';
     root.classList.toggle('light-theme');
     root.classList.toggle('dark-theme');
 }
