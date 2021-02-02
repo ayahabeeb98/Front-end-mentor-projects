@@ -1,9 +1,10 @@
 //TODO
-//Theme toggle #1
-// Add, Remove task #2
-// Mark task as Completed #3
-// Filter tasks (All, Active, Completed) #4
-// Clear Completed task #5
+//Theme toggle #1 ✅
+// Add, Remove task #2 ✅
+// Mark task as Completed #3 ✅
+// Filter tasks (All, Active, Completed) #4 ✅
+// Clear Completed task #5 ✅
+// Drag and drop task to reorder
 
 //#1
 const root = document.documentElement;
@@ -27,6 +28,20 @@ toggleBtn.addEventListener('click', toggleTheme);
 const addTaskForm = document.querySelector('.addTaskForm');
 const task = document.querySelector('#todoItem');
 const todoList = document.querySelector('.todo-list');
+
+//For Filtering the List
+
+const FILTER_MAP = {
+    All: () => [...document.querySelectorAll(".todo-item")],
+    Active: () => Array.from(document.querySelectorAll(".todo-item"))
+        .filter(item=>!item.classList.contains('done')),
+    Completed: () => [...document.querySelectorAll(".todo-item.done")]
+};
+
+let allItem = FILTER_MAP.All();
+let activeItem = FILTER_MAP.Active();
+let CompletedItem = FILTER_MAP.Completed();
+
 
 function addTask(e) {
     e.preventDefault();
@@ -56,7 +71,8 @@ function addTask(e) {
     todoList.insertBefore(todoItem, todoList.childNodes[0]);
 
     task.value = '';
-    countRemainingTodos()
+    countRemainingTodos();
+    allItem = FILTER_MAP.All();
 }
 
 addTaskForm.addEventListener('submit', addTask);
@@ -81,8 +97,10 @@ function todoAction(e) {
     console.log(targetEl);
 
     if (targetEl.classList.contains('btn-status')) {
-        //Mark task as complete
+        //#3 Mark task as complete
         targetEl.parentElement.classList.toggle('done');
+        CompletedItem = FILTER_MAP.Completed();
+        activeItem = FILTER_MAP.Active();
     } else if (targetEl.classList.contains('btn-remove')) {
         //Remove Task
         targetEl.parentElement.remove();
@@ -96,4 +114,41 @@ function todoAction(e) {
 
 }
 
-todoList.addEventListener('click', todoAction)
+todoList.addEventListener('click', todoAction);
+
+function addActive(e) {
+    let elems = document.querySelector(".btn-action.active");
+    if(elems !==null){
+        elems.classList.remove("active");
+    }
+    e.target.className += " active";
+}
+
+//#4 Filter tasks
+document.querySelectorAll('.btn-action').forEach((btn) => {
+
+    btn.addEventListener('click',function (e) {
+        addActive(e);
+        let actionType = btn.dataset.action;
+        todoList.innerHTML = '';
+        switch (actionType) {
+            case 'Active':
+                    activeItem.forEach(item => todoList.appendChild(item));
+                break;
+            case 'Completed':
+                    CompletedItem.forEach(item => todoList.appendChild(item));
+                break;
+            case 'All':
+                    allItem.forEach(item => todoList.appendChild(item));
+                break;
+            case 'Clear':
+                    CompletedItem = [];
+                    allItem = [...activeItem];
+                break;
+            default:
+                console.log('Something Went Wrong!');
+        }
+        countRemainingTodos();
+    });
+
+});

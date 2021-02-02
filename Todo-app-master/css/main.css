@@ -159,7 +159,6 @@ body {
 
 
 .todo-list {
-    margin-bottom: 2.5em;
     list-style: none;
     box-shadow: 2px 6px 16px var(--very-light-grayish-blue);
 }
@@ -185,6 +184,14 @@ body {
     padding: 0 .5em;
 }
 
+.actions-list {
+    margin-bottom: 2.5em;
+    box-shadow: 2px 6px 16px var(--very-light-grayish-blue);
+    border-bottom-left-radius: .3em;
+    border-bottom-right-radius: .3em;
+    overflow: hidden;
+}
+
 
 .actions {
     background-color: var(--gray);
@@ -208,6 +215,7 @@ body {
 
 .btn-action {
     font-weight: bold;
+    outline: none;
 }
 
 .btn-action:not(:last-of-type) {

@@ -77,28 +77,27 @@
                     <img src="./images/icon-cross.svg" alt="">
                 </button>
             </li>
-
-            <li>
-                <ul class="actions-list">
-                    <li class="actions">
-                        <p class="remainingTasks">4 items left</p>
-                        <div>
-                            <button class="btn btn-action active">All</button>
-                            <button class="btn btn-action">Active</button>
-                            <button class="btn btn-action">Completed</button>
-                        </div>
-                        <button class="btn btn-clear">
-                            Clear Completed
-                        </button>
-                    </li>
-                </ul>
-            </li>
         </ul>
+        <div class="actions-list">
+            <ul>
+                <li class="actions">
+                    <p class="remainingTasks">4 items left</p>
+                    <div>
+                        <button class="btn btn-action active" data-action="All">All</button>
+                        <button class="btn btn-action" data-action="Active">Active</button>
+                        <button class="btn btn-action" data-action="Completed">Completed</button>
+                    </div>
+                    <button class="btn btn-action" data-action="Clear">
+                        Clear Completed
+                    </button>
+                </li>
+            </ul>
+        </div>
 
         <div class="mobile-actions">
-            <button class="btn btn-action active">All</button>
-            <button class="btn btn-action">Active</button>
-            <button class="btn btn-action">Completed</button>
+            <button class="btn btn-action active" data-action="All">All</button>
+            <button class="btn btn-action" data-action="Active">Active</button>
+            <button class="btn btn-action" data-action="Completed">Completed</button>
         </div>
 
         <small class="info">
