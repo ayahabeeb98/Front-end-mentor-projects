@@ -30,6 +30,7 @@
         </h1>
         <button class="btn btn-toggle">
             <img src="./images/icon-moon.svg" id="icon" alt="">
+            <span class="visually-hidden">toggle theme</span>
         </button>
     </section>
 </header>
@@ -39,41 +40,58 @@
         <form class="addTaskForm">
             <span class="btn-status">&nbsp;</span>
             <label for="todoItem">
-                <input type="text" id="todoItem" placeholder="Create a new todo..." required>
+                <input type="text" autoComplete="off"
+                       id="todoItem" placeholder="Create a new todo..." required>
             </label>
         </form>
         <ul class="todo-list">
             <li class="todo-item done">
-                <button class="btn btn-status">&nbsp;</button>
+                <button class="btn btn-status">
+                    <span class="visually-hidden">Task Status</span>
+                    &nbsp;
+                </button>
                 <p>task#1</p>
                 <button class="btn btn-remove">
+                    <span class="visually-hidden">Remove task</span>
                     <img src="./images/icon-cross.svg" alt="">
                 </button>
             </li>
 
 
             <li class="todo-item">
-                <button class="btn btn-status">&nbsp;</button>
+                <button class="btn btn-status">
+                    <span class="visually-hidden">Task Status</span>
+                    &nbsp;
+                </button>
                 <p>task#2</p>
                 <button class="btn btn-remove">
+                    <span class="visually-hidden">Remove task</span>
                     <img src="./images/icon-cross.svg" alt="">
                 </button>
             </li>
 
 
             <li class="todo-item">
-                <button class="btn btn-status">&nbsp;</button>
+                <button class="btn btn-status">
+                    <span class="visually-hidden">Task Status</span>
+                    &nbsp;
+                </button>
                 <p>task#3</p>
                 <button class="btn btn-remove">
+                    <span class="visually-hidden">Remove task</span>
                     <img src="./images/icon-cross.svg" alt="">
                 </button>
             </li>
 
 
             <li class="todo-item">
-                <button class="btn btn-status">&nbsp;</button>
+                <button class="btn btn-status">
+                    <span class="visually-hidden">Task Status</span>
+                    &nbsp;
+                </button>
                 <p>task#4</p>
                 <button class="btn btn-remove">
+                    <span class="visually-hidden">Remove task</span>
                     <img src="./images/icon-cross.svg" alt="">
                 </button>
             </li>
@@ -83,9 +101,22 @@
                 <li class="actions">
                     <p class="remainingTasks">4 items left</p>
                     <div>
-                        <button class="btn btn-action active" data-action="All">All</button>
-                        <button class="btn btn-action" data-action="Active">Active</button>
-                        <button class="btn btn-action" data-action="Completed">Completed</button>
+                        <button class="btn btn-action active" data-action="All" aria-pressed="true">
+                            <span class="visually-hidden">Show </span>
+                            <span>All</span>
+                            <span class="visually-hidden"> tasks</span>
+
+                        </button>
+                        <button class="btn btn-action" data-action="Active" aria-pressed="false">
+                            <span class="visually-hidden">Show </span>
+                            <span>Active</span>
+                            <span class="visually-hidden"> tasks</span>
+                        </button>
+                        <button class="btn btn-action" data-action="Completed" aria-pressed="false">
+                            <span class="visually-hidden">Show </span>
+                            <span>Completed</span>
+                            <span class="visually-hidden"> tasks</span>
+                        </button>
                     </div>
                     <button class="btn btn-action" data-action="Clear">
                         Clear Completed
@@ -95,9 +126,22 @@
         </div>
 
         <div class="mobile-actions">
-            <button class="btn btn-action active" data-action="All">All</button>
-            <button class="btn btn-action" data-action="Active">Active</button>
-            <button class="btn btn-action" data-action="Completed">Completed</button>
+            <button class="btn btn-action active" data-action="All" aria-pressed="true">
+                <span class="visually-hidden">Show </span>
+                <span>All</span>
+                <span class="visually-hidden"> tasks</span>
+
+            </button>
+            <button class="btn btn-action" data-action="Active" aria-pressed="false">
+                <span class="visually-hidden">Show </span>
+                <span>Active</span>
+                <span class="visually-hidden"> tasks</span>
+            </button>
+            <button class="btn btn-action" data-action="Completed" aria-pressed="false">
+                <span class="visually-hidden">Show </span>
+                <span>Completed</span>
+                <span class="visually-hidden"> tasks</span>
+            </button>
         </div>
 
         <small class="info">

@@ -14,7 +14,7 @@ const themeIcon = document.querySelector('#icon');
 root.classList.add('dark-theme');
 
 function toggleTheme() {
-    let toggle = root.classList.contains('light-theme');
+    let toggle = root.classList.contains('dark-theme');
     themeIcon.src = toggle ? './images/icon-sun.svg' : './images/icon-moon.svg';
     root.classList.toggle('light-theme');
     root.classList.toggle('dark-theme');
@@ -53,15 +53,27 @@ function addTask(e) {
     const statusBtn = document.createElement('BUTTON');
     statusBtn.setAttribute('class', 'btn btn-status');
 
+    const statusText = document.createElement('SPAN');
+    statusText.textContent = 'Task Status';
+    statusText.setAttribute('class', 'visually-hidden');
+
+    statusBtn.appendChild(statusText);
+
+
     const taskContent = document.createElement('P');
     taskContent.textContent = taskValue;
 
     const removeBtn = document.createElement('BUTTON');
     removeBtn.setAttribute('class', 'btn btn-remove');
 
+    const removeText = document.createElement('SPAN');
+    removeText.textContent = 'Remove task';
+    removeText.setAttribute('class', 'visually-hidden');
+
     const crossIcon = document.createElement('IMG');
     crossIcon.src = "./images/icon-cross.svg";
 
+    removeBtn.appendChild(removeText);
     removeBtn.appendChild(crossIcon);
     //Creat a new li item
     todoItem.appendChild(statusBtn);
@@ -144,6 +156,7 @@ document.querySelectorAll('.btn-action').forEach((btn) => {
             case 'Clear':
                     CompletedItem = [];
                     allItem = [...activeItem];
+                    allItem.forEach(item => todoList.appendChild(item));
                 break;
             default:
                 console.log('Something Went Wrong!');
