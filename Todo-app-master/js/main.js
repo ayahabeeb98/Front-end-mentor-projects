@@ -84,7 +84,7 @@ function addTask(e) {
 
     task.value = '';
     countRemainingTodos();
-    allItem = FILTER_MAP.All();
+    updateTasks();
 }
 
 addTaskForm.addEventListener('submit', addTask);
