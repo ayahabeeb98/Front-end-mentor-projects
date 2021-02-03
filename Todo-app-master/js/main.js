@@ -104,6 +104,12 @@ function countRemainingTodos() {
     }
 }
 
+function updateTasks(){
+    CompletedItem = FILTER_MAP.Completed();
+    activeItem = FILTER_MAP.Active();
+    allItem = FILTER_MAP.All();
+}
+
 function todoAction(e) {
     const targetEl = e.target;
     console.log(targetEl);
@@ -111,16 +117,17 @@ function todoAction(e) {
     if (targetEl.classList.contains('btn-status')) {
         //#3 Mark task as complete
         targetEl.parentElement.classList.toggle('done');
-        CompletedItem = FILTER_MAP.Completed();
-        activeItem = FILTER_MAP.Active();
+        updateTasks();
     } else if (targetEl.classList.contains('btn-remove')) {
         //Remove Task
         targetEl.parentElement.remove();
-        countRemainingTodos()
+        countRemainingTodos();
+        updateTasks();
     } else if (targetEl.tagName === "IMG") {
         //Remove Task
         targetEl.parentElement.parentElement.remove();
-        countRemainingTodos()
+        countRemainingTodos();
+        updateTasks();
     }
 
 

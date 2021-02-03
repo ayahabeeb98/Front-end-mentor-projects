@@ -313,4 +313,8 @@ body {
     .todoWrapper {
         bottom: 6em;
     }
+
+    .btn-remove {
+        display: block;
+    }
 }
