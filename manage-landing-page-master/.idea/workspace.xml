@@ -191,6 +191,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -284,7 +285,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/Traning/Front-end-mentor-projects/coding-bootcamp-testimonials-slider-master/package.json">
+    <entry file="file://$PROJECT_DIR$/../../Traning/Front-end-mentor-projects/coding-bootcamp-testimonials-slider-master/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="6" column="64" lean-forward="true" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="64" />
@@ -298,14 +299,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/Traning/Front-end-mentor-projects/coding-bootcamp-testimonials-slider-master/scss/_variables.scss">
+    <entry file="file://$PROJECT_DIR$/../../Traning/Front-end-mentor-projects/coding-bootcamp-testimonials-slider-master/scss/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret selection-end-line="1" selection-end-column="40" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Desktop/Traning/Front-end-mentor-projects/coding-bootcamp-testimonials-slider-master/scss/_responsive.scss">
+    <entry file="file://$PROJECT_DIR$/../../Traning/Front-end-mentor-projects/coding-bootcamp-testimonials-slider-master/scss/_responsive.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="12" selection-start-line="12" selection-end-line="12" />
