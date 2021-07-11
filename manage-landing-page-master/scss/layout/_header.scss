@@ -48,6 +48,7 @@
     padding: 2.5em 0;
     background-color: #FFF;
     z-index:2;
+    box-shadow: 0 -3px 8px rgba(0,0,0,.16);
   }
 
 
@@ -74,7 +75,7 @@
   justify-content: space-between;
   position: relative;
   z-index: 2;
-  margin-bottom: 7.5em;
+  margin-bottom: 7em;
 
   &__text {
 

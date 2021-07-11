@@ -8,8 +8,8 @@ let toggle = true;
 btnToggle.addEventListener('click', () => {
     toggle === true ? btnToggleIcon.src = closeIcon : btnToggleIcon.src = openIcon;
     menu.classList.toggle('show');
-    document.body.classList.toggle('shadow')
-    toggle = false;
+    document.body.classList.toggle('shadow');
+    toggle = !toggle;
 });
 
 
