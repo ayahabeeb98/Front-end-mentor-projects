@@ -13,6 +13,15 @@ btnToggle.addEventListener('click', () => {
 });
 
 
+function checker() {
+    if(screen.width > 768) {
+        menu.classList.remove('show');
+        btnToggleIcon.src= openIcon;
+    }
+}
+
+window.addEventListener('resize', checker);
+
 const swiper = new Swiper('.swiper-container', {
     // Optional parameters
     slidesPerView: "auto",
@@ -59,9 +68,7 @@ function validation(e) {
     return true
 }
 
-/**
- * @return {boolean}
- */
+
 function validateEmail(email) {
     const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return re.test(String(email).toLowerCase());
