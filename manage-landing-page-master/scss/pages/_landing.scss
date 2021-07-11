@@ -1,0 +1,147 @@
+.different-section {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+
+  &__left,
+  &__right {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__left {
+    h2 {
+      margin-bottom: .6em;
+    }
+
+    p {
+      max-width: 350px;
+    }
+  }
+
+  .box {
+    display: flex;
+    margin-bottom: 2.5em;
+
+    &__badge {
+      background-color: $primary-bright-red;
+      color: #fff;
+      width: 67px;
+      height: 39px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-right: 1.7em;
+      border-radius: 39px;
+    }
+
+    &__text {
+      padding-top: 6px;
+    }
+
+    &__title {
+      color: $primary-dark-blue;
+      margin-bottom: 1.18em;
+    }
+
+    p {
+      max-width: 445px;
+    }
+  }
+
+  .different-img {
+    bottom: -100%;
+    left: -32em;
+  }
+
+}
+
+
+.testimonial {
+  position: relative;
+  z-index: 3;
+  margin-top: 8em;
+  text-align: center;
+  margin-bottom: 11.25em;
+
+  .sub-header {
+    margin-bottom: 1.6em;
+  }
+
+  .swiper-container {
+    height: 100%;
+    width: 100%;
+    padding-top: 2.5em;
+  }
+
+
+  &__cards {
+    list-style: none;
+    margin-bottom: 3em;
+  }
+
+  &__card {
+    background-color: $secondary-very-light-gray;
+    padding: 3.75em 2.5em 2.5em 2.5em;
+    width: 540px !important;
+    max-width: 100%;
+    position: relative;
+    text-align: center;
+    cursor: pointer;
+
+    &:not(:last-of-type) {
+      margin-right: 1.875em;
+    }
+
+    h4 {
+      color: $primary-dark-blue;
+      margin-bottom: 1.18em;
+    }
+
+    img {
+      position: absolute;
+      top: -15%;
+      left: 15%;
+      right: 15%;
+      margin: 0 auto;
+      width: 72px;
+      height: 72px;
+    }
+  }
+}
+
+.simplify {
+  background-color: $primary-bright-red;
+  background-image: url("../images/bg-simplify-section-desktop.svg");
+  background-position: bottom right;
+  background-size: cover;
+  padding: 3.87em 0;
+
+  > div.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  & .sub-header {
+    color: #FFF;
+    max-width: 550px;
+  }
+
+  & .btn--started {
+    background-color: #fff;
+    color: $primary-bright-red;
+    box-shadow: 0 15px 15px -10px #DB5943;
+
+
+    &:hover {
+      background-color: $secondary-very-pale-red;
+    }
+  }
+}
+
+@media (min-width: 786px) {
+  .swiper-pagination {
+    display: none;
+  }
+}

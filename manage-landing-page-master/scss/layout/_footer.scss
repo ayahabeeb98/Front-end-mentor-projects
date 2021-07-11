@@ -1,0 +1,113 @@
+.page-footer {
+  background-color: $secondary-very-dark-blue;
+  padding: 3.875em 0 .875em;
+  color: $secondary-dark-grayish-blue;
+
+  .footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 3em;
+
+    &__logo,
+    &__form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &__social {
+
+      & .social__link {
+        color: $secondary-very-light-gray;
+      }
+
+      & .social__link:not(:first-of-type) {
+        margin-left: 13px;
+
+      }
+    }
+
+    &__list-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 33%;
+    }
+
+    &__list {
+      display: flex;
+      flex-direction: column;
+      list-style: none;
+    }
+
+    &__item {
+      margin-bottom: 13px;
+
+      a {
+        text-decoration: none;
+        color: $secondary-very-light-gray;
+        font-size: .9375em;
+
+      }
+    }
+
+
+    a {
+      transition: color 300ms ease-in-out;
+      &:hover {
+        color: $primary-bright-red;
+      }
+    }
+
+    &__form {
+      align-items: flex-end;
+
+      .formContainer {
+        position: relative;
+      }
+
+      .errorMsg {
+        display: none;
+        position: absolute;
+        left: 1em;
+        bottom: -2em;
+        font-size: 10px;
+        color: $error-color;
+      }
+
+      .form-control,
+      .btn {
+        border-radius: 22px;
+        border: none;
+        box-shadow: none;
+      }
+
+      .form-control {
+        padding: 1em;
+        margin-right: .5em;
+      }
+
+      .form-control.error {
+          box-shadow:inset 0 0 0 2px $error-color;
+          color: $error-color;
+      }
+
+      .alert {
+        padding: 5px;
+        background-color: rgba(35, 191, 94, 0.8);
+        margin-bottom: 10px;
+        color: #130505;
+        font-weight: bold;
+        border-radius: 22px;
+        text-align: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+    }
+
+  }
+
+}
