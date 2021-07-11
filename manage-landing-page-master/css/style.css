@@ -120,7 +120,7 @@ body {
   justify-content: space-between;
   position: relative;
   z-index: 2;
-  margin-bottom: 6.5em; }
+  margin-bottom: 6.25em; }
   .hero__text h1 {
     color: #242d52;
     font-size: 3.5em;
@@ -240,7 +240,7 @@ body {
   z-index: 3;
   margin-top: 7.5em;
   text-align: center;
-  margin-bottom: 11.25em; }
+  margin-bottom: 11.5em; }
   .testimonial .sub-header {
     margin-bottom: 1.6em; }
   .testimonial .swiper-container {
