@@ -9,6 +9,6 @@
   "author": "Aya Habeeb",
   "license": "ISC",
   "dependencies": {
-    "node-sass": "^6.0.1"
+    "node-sass": "^7.0.0"
   }
 }
