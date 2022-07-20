@@ -17,6 +17,6 @@
   },
   "homepage": "https://github.com/ayahabeeb98/Front-end-mentor-projects#readme",
   "devDependencies": {
-    "node-sass": "^4.14.1"
+    "node-sass": "^7.0.0"
   }
 }
